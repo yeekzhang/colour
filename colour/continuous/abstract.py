@@ -150,7 +150,7 @@ class AbstractContinuousFunction:
             Abstract continuous function dtype.
         """
 
-        return self._dtype
+        pass
 
     def _set_dtype(self, value):
         """
@@ -159,6 +159,8 @@ class AbstractContinuousFunction:
         """
 
         pass
+
+    domain = abstractproperty(_get_dtype, _set_dtype)
 
     def _get_domain(self):
         """
@@ -694,7 +696,7 @@ class AbstractContinuousFunction:
         return self.arithmetical_operation(a, '**', True)
 
     @abstractmethod
-    def arithmetical_operation(self, a, operation, in_place):
+    def arithmetical_operation(self, a, operation, in_place=False):
         """
         Performs given arithmetical operation with :math:`a` operand, the
         operation can be either performed on a copy or in-place, must be

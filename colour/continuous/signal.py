@@ -845,6 +845,21 @@ class Signal(AbstractContinuousFunction):
         else:
 
             def _undefined_function(*args, **kwargs):
+                """
+                Raises a `RuntimeError` exception.
+
+                Other Parameters
+                ----------------
+                \*args : list, optional
+                    Arguments.
+                \**kwargs : dict, optional
+                    Keywords arguments.
+
+                Raises
+                ------
+                RuntimeError
+                """
+
                 raise RuntimeError(
                     'Underlying signal interpolator function does not exists, '
                     'please ensure you defined both '

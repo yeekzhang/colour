@@ -237,7 +237,7 @@ class TestInterval(unittest.TestCase):
         np.testing.assert_almost_equal(
             interval([1, 2, 3, 4, 6, 6.5]), np.array([0.5, 1.0, 2.0]))
 
-        self.equal = np.testing.assert_almost_equal(
+        np.testing.assert_almost_equal(
             interval([1, 2, 3, 4, 6, 6.5], False),
             np.array([1.0, 1.0, 1.0, 2.0, 0.5]))
 

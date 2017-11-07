@@ -475,12 +475,12 @@ class TestSignal(unittest.TestCase):
 
         np.testing.assert_array_almost_equal(
             signal.arithmetical_operation(self._range, '+', False).range,
-            signal._range + self._range,
+            signal.range + self._range,
             decimal=7)
 
         np.testing.assert_array_almost_equal(
             signal.arithmetical_operation(signal, '+', False).range,
-            signal._range + signal._range,
+            signal.range + signal._range,
             decimal=7)
 
     def test_is_uniform(self):

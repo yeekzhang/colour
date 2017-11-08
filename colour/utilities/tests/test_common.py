@@ -123,7 +123,7 @@ class TestIsNumeric(unittest.TestCase):
 
         self.assertTrue(is_numeric(complex(1)))
 
-        self.assertFalse(is_numeric((1,)))
+        self.assertFalse(is_numeric((1, )))
 
         self.assertFalse(is_numeric([1]))
 

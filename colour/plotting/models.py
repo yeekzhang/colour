@@ -80,7 +80,7 @@ def RGB_colourspaces_CIE_1931_chromaticity_diagram_plot(
 
     Examples
     --------
-    >>> c = ['Rec. 709', 'ACEScg', 'S-Gamut']
+    >>> c = ['ITU-R BT.709', 'ACEScg', 'S-Gamut']
     >>> RGB_colourspaces_CIE_1931_chromaticity_diagram_plot(
     ...     c)  # doctest: +SKIP
     """
@@ -91,7 +91,7 @@ def RGB_colourspaces_CIE_1931_chromaticity_diagram_plot(
     canvas(**settings)
 
     if colourspaces is None:
-        colourspaces = ('Rec. 709', 'ACEScg', 'S-Gamut', 'Pointer Gamut')
+        colourspaces = ('ITU-R BT.709', 'ACEScg', 'S-Gamut', 'Pointer Gamut')
 
     cmfs, name = get_cmfs(cmfs), cmfs
 
@@ -232,7 +232,7 @@ def RGB_colourspaces_CIE_1960_UCS_chromaticity_diagram_plot(
 
     Examples
     --------
-    >>> c = ['Rec. 709', 'ACEScg', 'S-Gamut']
+    >>> c = ['ITU-R BT.709', 'ACEScg', 'S-Gamut']
     >>> RGB_colourspaces_CIE_1960_UCS_chromaticity_diagram_plot(
     ...     c)  # doctest: +SKIP
     """
@@ -243,7 +243,7 @@ def RGB_colourspaces_CIE_1960_UCS_chromaticity_diagram_plot(
     canvas(**settings)
 
     if colourspaces is None:
-        colourspaces = ('Rec. 709', 'ACEScg', 'S-Gamut', 'Pointer Gamut')
+        colourspaces = ('ITU-R BT.709', 'ACEScg', 'S-Gamut', 'Pointer Gamut')
 
     cmfs, name = get_cmfs(cmfs), cmfs
 
@@ -390,7 +390,7 @@ def RGB_colourspaces_CIE_1976_UCS_chromaticity_diagram_plot(
 
     Examples
     --------
-    >>> c = ['Rec. 709', 'ACEScg', 'S-Gamut']
+    >>> c = ['ITU-R BT.709', 'ACEScg', 'S-Gamut']
     >>> RGB_colourspaces_CIE_1976_UCS_chromaticity_diagram_plot(
     ...     c)  # doctest: +SKIP
     """
@@ -401,7 +401,7 @@ def RGB_colourspaces_CIE_1976_UCS_chromaticity_diagram_plot(
     canvas(**settings)
 
     if colourspaces is None:
-        colourspaces = ('Rec. 709', 'ACEScg', 'S-Gamut', 'Pointer Gamut')
+        colourspaces = ('ITU-R BT.709', 'ACEScg', 'S-Gamut', 'Pointer Gamut')
 
     cmfs, name = get_cmfs(cmfs), cmfs
 
@@ -554,7 +554,7 @@ def RGB_chromaticity_coordinates_CIE_1931_chromaticity_diagram_plot(
     Examples
     --------
     >>> RGB = np.random.random((10, 10, 3))
-    >>> c = 'Rec. 709'
+    >>> c = 'ITU-R BT.709'
     >>> RGB_chromaticity_coordinates_CIE_1931_chromaticity_diagram_plot(
     ...     RGB, c)  # doctest: +SKIP
     """
@@ -616,7 +616,7 @@ def RGB_chromaticity_coordinates_CIE_1960_UCS_chromaticity_diagram_plot(
     Examples
     --------
     >>> RGB = np.random.random((10, 10, 3))
-    >>> c = 'Rec. 709'
+    >>> c = 'ITU-R BT.709'
     >>> RGB_chromaticity_coordinates_CIE_1960_UCS_chromaticity_diagram_plot(
     ...     RGB, c)  # doctest: +SKIP
     """
@@ -679,7 +679,7 @@ def RGB_chromaticity_coordinates_CIE_1976_UCS_chromaticity_diagram_plot(
     Examples
     --------
     >>> RGB = np.random.random((10, 10, 3))
-    >>> c = 'Rec. 709'
+    >>> c = 'ITU-R BT.709'
     >>> RGB_chromaticity_coordinates_CIE_1976_UCS_chromaticity_diagram_plot(
     ...     RGB, c)  # doctest: +SKIP
     """
@@ -713,7 +713,8 @@ def RGB_chromaticity_coordinates_CIE_1976_UCS_chromaticity_diagram_plot(
     return display(**settings)
 
 
-def single_cctf_plot(colourspace='Rec. 709', decoding_cctf=False, **kwargs):
+def single_cctf_plot(colourspace='ITU-R BT.709', decoding_cctf=False,
+                     **kwargs):
     """
     Plots given colourspace colour component transfer function.
 
@@ -776,7 +777,7 @@ def multi_cctf_plot(colourspaces=None, decoding_cctf=False, **kwargs):
 
     Examples
     --------
-    >>> multi_cctf_plot(['Rec. 709', 'sRGB'])  # doctest: +SKIP
+    >>> multi_cctf_plot(['ITU-R BT.709', 'sRGB'])  # doctest: +SKIP
     """
 
     settings = {'figure_size': (DEFAULT_FIGURE_WIDTH, DEFAULT_FIGURE_WIDTH)}
@@ -785,7 +786,7 @@ def multi_cctf_plot(colourspaces=None, decoding_cctf=False, **kwargs):
     canvas(**settings)
 
     if colourspaces is None:
-        colourspaces = ('Rec. 709', 'sRGB')
+        colourspaces = ('ITU-R BT.709', 'sRGB')
 
     samples = np.linspace(0, 1, 1000)
     for colourspace in colourspaces:

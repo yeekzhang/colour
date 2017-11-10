@@ -14,7 +14,8 @@ from itertools import permutations
 
 from colour.models import (RGB_COLOURSPACES, RGB_Colourspace, XYZ_to_RGB,
                            RGB_to_XYZ, RGB_to_RGB_matrix, RGB_to_RGB,
-                           normalised_primary_matrix, oetf_sRGB, eotf_sRGB)
+                           normalised_primary_matrix, oetf_sRGB,
+                           oetf_reverse_sRGB)
 from colour.utilities import ignore_numpy_errors
 
 __author__ = 'Colour Developers'
@@ -346,7 +347,7 @@ class TestRGB_to_XYZ(unittest.TestCase):
                     [[0.41240000, 0.35760000, 0.18050000],
                      [0.21260000, 0.71520000, 0.07220000],
                      [0.01930000, 0.11920000, 0.95050000]]), 'Bradford',
-                eotf_sRGB),
+                oetf_reverse_sRGB),
             np.array([0.11518475, 0.10080000, 0.05089373]),
             decimal=7)  # yapf: disable
 
